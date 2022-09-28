@@ -224,7 +224,7 @@ For **Next.js** user, code transpilation is needed.
 // next.config.js
 const withTM = require("next-transpile-modules")(["echarts", "zrender"]);
 
-module.exports = withMT({})
+module.exports = withTM({})
 ```
 
 ## Props of Component
@@ -311,6 +311,10 @@ the `opts` of echarts. `object`, will be used when initial echarts instance by `
   opts={{renderer: 'svg'}} // use svg to render the chart.
 />
 ```
+
+- **`autoResize`** (optional, boolean)
+
+decide whether to trigger `this.resize` when window resize. default is `true`.
 
 
 ## Component API & Echarts API
